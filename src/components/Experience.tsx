@@ -9,7 +9,7 @@ const experiences = [
   {
     id: 1,
     type: 'work',
-    title: 'FullStack Developer',
+    title: 'Full Stack Developer',
     company: 'Nebula Accelerator',
     location: 'New Delhi, India (Hybrid)',
     duration: 'May 2025 - July 2025',
@@ -20,7 +20,7 @@ const experiences = [
   {
     id: 2,
     type: 'work',
-    title: 'Full Stack Developer Intern',
+    title: 'Full Stack Developer',
     company: 'Knax Technolgies',
     location: 'Gujarat, India (Remote)',
     duration: 'Jan 2025- April 2025',
