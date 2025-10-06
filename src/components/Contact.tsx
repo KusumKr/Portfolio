@@ -3,31 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FiMail, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
-
-const contactInfo = [
-  {
-    icon: FiMail,
-    title: 'Email',
-    value: 'kusumkr2004@gmail.com',
-    href: 'mailto:kusumkr2004@gmail.com',
-    color: 'from-red-500 to-pink-500'
-  },
-  {
-    icon: FiPhone,
-    title: 'Phone',
-    value: '+91 8750941682',
-    href: 'tel:+918750941682',
-    color: 'from-green-500 to-emerald-500'
-  },
-  {
-    icon: FiMapPin,
-    title: 'Location',
-    value: 'New Delhi, India',
-    href: '#',
-    color: 'from-blue-500 to-cyan-500'
-  }
-]
+import { FiSend, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
 
 const socialLinks = [
   {
@@ -133,82 +109,40 @@ export default function Contact() {
             <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <motion.div variants={itemVariants} className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-semibold text-dark-800 dark:text-dark-100 mb-6">
-                  Let's Connect
-                </h3>
-                <p className="text-dark-600 dark:text-dark-300 leading-relaxed mb-8">
-                  Whether you have a project in mind, want to collaborate, or just want to say hi, 
-                  I'd love to hear from you. Let's create something amazing together!
-                </p>
-              </div>
+          {/* Connect with me */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.6 }}
+            className="p-6 bg-white dark:bg-dark-800 rounded-xl shadow-lg border border-white/20 dark:border-dark-700/50"
+          >
+            <h4 className="text-xl font-semibold text-dark-800 dark:text-dark-100 mb-3">
+              Connect with me
+            </h4>
+            <p className="text-dark-600 dark:text-dark-300 mb-4">
+              Feel free to reach out through any of these platforms.
+            </p>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -3 }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`p-3 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl text-dark-600 dark:text-dark-300 ${social.color} transition-all duration-300 border border-white/20 dark:border-dark-700/50`}
+                  aria-label={social.name}
+                >
+                  <social.icon size={20} />
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
 
-              {/* Contact Info Cards */}
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <motion.a
-                    key={info.title}
-                    href={info.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    whileHover={{ scale: 1.02, x: 10 }}
-                    className="flex items-center gap-4 p-4 bg-white dark:bg-dark-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 dark:border-dark-700/50 group"
-                  >
-                    <motion.div
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.5 }}
-                      className={`w-12 h-12 rounded-lg bg-gradient-to-r ${info.color} flex items-center justify-center shadow-lg`}
-                    >
-                      <info.icon className="text-white" size={20} />
-                    </motion.div>
-                    <div>
-                      <h4 className="font-semibold text-dark-800 dark:text-dark-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                        {info.title}
-                      </h4>
-                      <p className="text-dark-600 dark:text-dark-300">
-                        {info.value}
-                      </p>
-                    </div>
-                  </motion.a>
-                ))}
-              </div>
-
-              {/* Social Links */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 0.8 }}
-                className="pt-8"
-              >
-                <h4 className="text-lg font-semibold text-dark-800 dark:text-dark-100 mb-4">
-                  Follow Me
-                </h4>
-                <div className="flex gap-4">
-                  {socialLinks.map((social) => (
-                    <motion.a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1, y: -3 }}
-                      whileTap={{ scale: 0.9 }}
-                      className={`p-3 bg-white dark:bg-dark-800 rounded-lg shadow-lg hover:shadow-xl text-dark-600 dark:text-dark-300 ${social.color} transition-all duration-300 border border-white/20 dark:border-dark-700/50`}
-                      aria-label={social.name}
-                    >
-                      <social.icon size={20} />
-                    </motion.a>
-                  ))}
-                </div>
-              </motion.div>
-            </motion.div>
-
-            {/* Contact Form */}
-            <motion.div variants={itemVariants}>
-              <div className="bg-white dark:bg-dark-800 rounded-2xl shadow-xl p-8 border border-white/20 dark:border-dark-700/50">
+          {/* Contact Form */}
+          <motion.div variants={itemVariants}>
+            <div className="bg-white dark:bg-dark-800 rounded-2xl shadow-xl p-8 border border-white/20 dark:border-dark-700/50">
                 <h3 className="text-2xl font-semibold text-dark-800 dark:text-dark-100 mb-6">
                   Send me a message
                 </h3>
@@ -340,7 +274,6 @@ export default function Contact() {
                 )}
               </div>
             </motion.div>
-          </div>
         </motion.div>
       </div>
 

@@ -137,6 +137,9 @@ export default function Projects() {
     : projects.filter(project => project.category === selectedCategory)
 
   const featuredProjects = projects.filter(project => project.featured)
+  const gridProjects = selectedCategory === 'All'
+  ? projects.filter(p => !p.featured)
+  : projects.filter(p => p.category === selectedCategory)
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -273,12 +276,15 @@ export default function Projects() {
                         </motion.a>
                       </div>
                       
-                      <motion.button
-                        whileHover={{ x: 5 }}
-                        className="flex items-center gap-1 text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300"
-                      >
-                        Learn More <FiArrowRight size={14} />
-                      </motion.button>
+                      <motion.a
+  href={project.live}
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ x: 5 }}
+  className="flex items-center gap-1 text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300"
+>
+  Learn More <FiArrowRight size={14} />
+</motion.a>
                     </div>
                   </div>
                 </motion.div>
@@ -310,7 +316,7 @@ export default function Projects() {
           {/* All Projects Grid */}
           <motion.div variants={itemVariants}>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.filter(project => !project.featured).map((project, index) => (
+            {gridProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -392,12 +398,15 @@ export default function Projects() {
                         </motion.a>
                       </div>
                       
-                      <motion.button
-                        whileHover={{ x: 3 }}
-                        className="flex items-center gap-1 text-xs font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300"
-                      >
-                        View <FiArrowRight size={12} />
-                      </motion.button>
+                      <motion.a
+  href={project.live}
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ x: 3 }}
+  className="flex items-center gap-1 text-xs font-medium text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300"
+>
+  View <FiArrowRight size={12} />
+</motion.a>
                     </div>
                   </div>
                 </motion.div>
