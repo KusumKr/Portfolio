@@ -85,7 +85,7 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Download Resume Button */}
+              {/* Download Resume Button
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -101,7 +101,7 @@ export default function About() {
                   <FiDownload size={20} />
                   Download Resume
                 </a>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
 
             {/* Profile Image and Stats */}
