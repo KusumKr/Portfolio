@@ -3,22 +3,22 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FiGithub, FiExternalLink, FiArrowRight } from 'react-icons/fi'
-import { SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiTailwindcss, SiJavascript, SiTypescript, SiFirebase, SiThreedotjs, SiChartdotjs, SiHtml5, SiCss3, SiPython } from 'react-icons/si'
+import { SiReact, SiNextdotjs, SiNodedotjs, SiMongodb, SiTailwindcss, SiJavascript, SiTypescript, SiFirebase, SiThreedotjs, SiChartdotjs, SiHtml5, SiCss3, SiPython, SiExpress } from 'react-icons/si'
 
 const projects = [
   {
     id: 1,
-    title: 'Orderbook Depth 3D Visualizer',
-    description: 'A real-time 3D visualization of cryptocurrency orderbook data with advanced trading insights, pressure zone analysis, and multi-venue support.',
-    image:'/project1-img.png',
+    title: 'ArogyaMaa',
+    description: 'ArogyMaa is a multilingual wellness companion for motherhood. Get personalized nutrition and hygiene tips in your local language, powered by voice.',
+    image: '/project9-img.png',
     technologies: [
-      { name: 'Typescript', icon: SiTypescript, color: 'text-blue-500' },
-      { name: 'Three.js', icon: SiThreedotjs, color: 'text-green-500' },
-      { name: 'Next.js', icon: SiNextdotjs, color: 'text-green-600' },
-      { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-500' }
+      { name: 'React.js', icon: SiReact, color: 'text-black dark:text-white' },
+      { name: 'Express.js', icon: SiExpress, color: 'text-blue-500' },
+      { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-600' },
+      { name: 'Next.js', icon: SiNextdotjs, color: 'text-cyan-500' }
     ],
-    github: 'https://github.com/KusumKr/Orderbook-Depth-3D-Visualizer',
-    live: 'https://orderbook-depth-3-d-visualizer-chi.vercel.app/',
+    github: 'https://github.com/KusumKr/ArogyaMaa',
+    live: 'https://arogya-maa.vercel.app/',
     featured: true,
     category: 'Full Stack'
   },
@@ -119,7 +119,24 @@ const projects = [
     github: 'https://github.com/KusumKr/Robo-speaker',
     featured: false,
     category: 'Python Projects'
-  }
+  },
+  {
+    id: 9,
+    title: 'Orderbook Depth 3D Visualizer',
+    description: 'A real-time 3D visualization of cryptocurrency orderbook data with advanced trading insights, pressure zone analysis, and multi-venue support.',
+    image:'/project1-img.png',
+    technologies: [
+      { name: 'Typescript', icon: SiTypescript, color: 'text-blue-500' },
+      { name: 'Three.js', icon: SiThreedotjs, color: 'text-green-500' },
+      { name: 'Next.js', icon: SiNextdotjs, color: 'text-green-600' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-500' }
+    ],
+    github: 'https://github.com/KusumKr/Orderbook-Depth-3D-Visualizer',
+    live: 'https://orderbook-depth-3-d-visualizer-chi.vercel.app/',
+    featured: true,
+    category: 'Full Stack'
+  },
+  
 ]
 
 const categories = ['All', 'Full Stack', 'Frontend', 'Python Projects']
