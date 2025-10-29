@@ -136,6 +136,22 @@ const projects = [
     featured: true,
     category: 'Full Stack'
   },
+  {
+    id: 10,
+    title: 'Book-Finder',
+    description: 'A modern, elegant web application for discovering and exploring books using the Open Library API.',
+    image:'/project10-img.png',
+    technologies: [
+      { name: 'Typescript', icon: SiTypescript, color: 'text-blue-500' },
+      { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-500' },
+      { name: 'Next.js', icon: SiNextdotjs, color: 'text-green-600' },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-500' }
+    ],
+    github: 'https://github.com/KusumKr/Book-Finder',
+    live: 'https://book-finder-chi-ecru.vercel.app/',
+    featured: true,
+    category: 'Frontend'
+  },
   
 ]
 
