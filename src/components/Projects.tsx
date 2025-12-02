@@ -57,17 +57,19 @@ const projects = [
   {
     id: 4,
     title: 'Job Matchmakers',
-    description: 'Designed to streamline the job search process by matching candidates with job opportunities that best fit their profiles. It is an AI powered platform connecting job seekers with ideal opportunities.',
+    description: 'AI-powered job-matching platform offering smart resume analysis, skill-gap insights, and AI-based job recommendations.',
     image: '/project4-img.png',
     technologies: [
-      { name: 'HTML', icon: SiHtml5, color: 'text-black dark:text-white' },
-      { name: 'CSS', icon: SiCss3, color: 'text-green-500' },
-      { name: 'Javascript', icon: SiJavascript, color: 'text-green-600' }
+      { name: 'React.js', icon: SiReact, color: 'text-black dark:text-white' },
+      { name: 'MongoDB', icon: SiMongodb, color: 'text-blue-500' },
+      { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-600' },
+      { name: 'Next.js', icon: SiNextdotjs, color: 'text-cyan-500' }
+
     ],
     github: 'https://github.com/KusumKr/Job-Matchmakers-Pro',
     live: 'https://job-matchmakers.vercel.app/',
-    featured: false,
-    category: 'Frontend'
+    featured: true,
+    category: 'Full Stack'
   },
   {
     id: 5,
@@ -149,7 +151,7 @@ const projects = [
     ],
     github: 'https://github.com/KusumKr/Book-Finder',
     live: 'https://book-finder-chi-ecru.vercel.app/',
-    featured: true,
+    featured: false,
     category: 'Frontend'
   },
   
