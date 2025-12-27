@@ -97,7 +97,7 @@ export default function Hero() {
             
             <motion.a
               href="/resume.pdf"
-              download="Kusum K Resume.pdf"
+              download="Kusum Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
