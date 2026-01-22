@@ -154,6 +154,22 @@ const projects = [
     featured: false,
     category: 'Frontend'
   },
+  {
+    id: 11,
+    title: 'Live Polling System',
+    description: 'A resilient live polling system with real-time updates, state recovery, and timer synchronization.',
+    image:'/project11-img.png',
+    technologies: [
+      { name: 'React.js', icon: SiReact, color: 'text-blue-500' },
+      { name: 'Node.js', icon: SiNodedotjs, color: 'text-green-500' },
+      { name: 'Express.js', icon: SiExpress, color: 'text-green-600' },
+      { name: 'MongoDb', icon: SiMongodb, color: 'text-cyan-500' }
+    ],
+    github: 'https://github.com/KusumKr/Live-Poll',
+    live: 'https://live-poll-kappa.vercel.app/',
+    featured: false,
+    category: 'Full Stack'
+  },
   
 ]
 
