@@ -96,10 +96,8 @@ export default function Hero() {
             </motion.a>
             
             <motion.a
-              href="/resume.pdf"
-              download="Kusum Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/Kusum-Kharayat-Resume.pdf"
+              download="Kusum-Kharayat-Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 py-4 border-2 border-primary-500 text-primary-600 dark:text-primary-400 font-semibold rounded-lg hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-all duration-300 flex items-center justify-center gap-2"
