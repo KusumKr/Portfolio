@@ -9,6 +9,17 @@ const experiences = [
   {
     id: 1,
     type: 'work',
+    title: 'SDE Intern',
+    company: 'Jaagruk Bharat',
+    location: 'New Delhi, India (Remote)',
+    duration: 'Jan 2026 - Present',
+    description: 'Built scalable frontend and backend services using React.js, Next.js, Java and Spring Boot to power user-facing and internal platforms.',
+    technologies: ['React.js', 'Java', 'Spring Boot', 'PostgreSQL'],
+    icon: FiBriefcase
+  },
+  {
+    id: 2,
+    type: 'work',
     title: 'Full Stack Developer',
     company: 'Nebula Accelerator',
     location: 'New Delhi, India (Hybrid)',
@@ -18,7 +29,7 @@ const experiences = [
     icon: FiBriefcase
   },
   {
-    id: 2,
+    id: 3,
     type: 'work',
     title: 'Full Stack Developer',
     company: 'Knax Technolgies',
