@@ -23,7 +23,7 @@ const experiences = [
     title: 'Full Stack Developer',
     company: 'Nebula Accelerator',
     location: 'New Delhi, India (Hybrid)',
-    duration: 'May 2025 - July 2025',
+    duration: 'May 2025 - Oct 2025',
     description: 'Build scalable and responsive web applications using modern frameworks & Contributing to dynamic startup projects working across the MERN Stack..',
     technologies: ['React.js', 'Node.js', 'TypeScript', 'MongoDB, Express.js'],
     icon: FiBriefcase
@@ -34,7 +34,7 @@ const experiences = [
     title: 'Full Stack Developer',
     company: 'Knax Technolgies',
     location: 'Gujarat, India (Remote)',
-    duration: 'Jan 2025- April 2025',
+    duration: 'Nov 2024 - April 2025',
     description: 'Collaborated remotely with a cross-functional team to design, develop and maintain responsive and user-friendly web applications.',
     technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     icon: FiBriefcase
